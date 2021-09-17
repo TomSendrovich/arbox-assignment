@@ -49,7 +49,6 @@ try{
     var index = 0;
     var emailArr = []
     if (user_id == undefined){
-      console.log("problem");
       user_id = 4;
     }
     //Loops through the data to convert it to a .json file
