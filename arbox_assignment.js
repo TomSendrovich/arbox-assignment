@@ -28,8 +28,7 @@ function excelTimeToDate(excelTime){
 }
 
 var user_id;
-
-//finds the next next user_id to put in the // DEBUG:
+//finds the next next user_id to put in the DB:
 try{
   parseXlsx(fullInputAr_DBPath).then((data) => {
     user_id = data.length;
@@ -49,6 +48,10 @@ try{
     var membershipData = []
     var index = 0;
     var emailArr = []
+    if (user_id == undefined){
+      console.log("problem");
+      user_id = 4;
+    }
     //Loops through the data to convert it to a .json file
     for (let i=1;i< data.length; i++){
       var firstName = data[i][0];
